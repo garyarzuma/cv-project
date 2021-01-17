@@ -1,3 +1,41 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.fa-github-square:before {
+  font-size: 40px;
+}
+
+.footer {
+  bottom: 10px;
+  position: absolute;
+}
+
+.header {
+  font-size: 40px;
+}
+
+.Resume {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  width: 60%;
+}
+
+.Resume .personal-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Resume .personal-info .name-area {
+  font-size: 30px;
+}
+
+p {
+  margin: 0;
 }
