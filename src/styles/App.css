@@ -21,6 +21,7 @@
 
 .Resume {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   border: 2px solid black;
   width: 60%;
@@ -36,6 +37,15 @@
   font-size: 30px;
 }
 
+.Resume .personal-info .name-area input {
+  font-size: 30px;
+}
+
 p {
   margin: 0;
+}
+
+.work-exp {
+  display: flex;
+  flex-direction: column;
 }
