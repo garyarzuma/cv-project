@@ -13,6 +13,9 @@ class App extends React.Component {
         <div className="Resume">
           <PersonalInfo />
           <WorkExp />
+          <WorkExp />
+          <WorkExp />
+          <WorkExp />
         </div>
         <Footer />
       </div>
