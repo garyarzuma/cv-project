@@ -46,7 +46,9 @@ p {
   margin: 0;
 }
 
-.work-exp {
+.work-exp,
+.education,
+.skills {
   display: flex;
   flex-direction: column;
 }

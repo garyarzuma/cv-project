@@ -1,7 +1,7 @@
 import React from "react";
 import LabelInput from "./LabelInput";
 
-class WorkExp extends React.Component {
+class Education extends React.Component {
   constructor() {
     super();
     this.state = { formVisible: false, currentData: {}, savedData: [] };
@@ -68,11 +68,11 @@ class WorkExp extends React.Component {
       return (
         <div className={index}>
           {delButton}
-          <div key={arrayItem.company}>{arrayItem.company}</div>
+          <div key={arrayItem.school}>{arrayItem.school}</div>
           <div key={arrayItem.from}>{arrayItem.from}</div>
           <div key={arrayItem.to}>{arrayItem.to}</div>
-          <div key={arrayItem.city}>{arrayItem.city}</div>
-          <div key={arrayItem.role}>{arrayItem.role}</div>
+          <div key={arrayItem.degree}>{arrayItem.degree}</div>
+          <div key={arrayItem.gpa}>{arrayItem.gpa}</div>
           <div key={arrayItem.description}>{arrayItem.description}</div>
         </div>
       );
@@ -85,14 +85,8 @@ class WorkExp extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <LabelInput
-          label="Company Name"
-          name="company"
-          value={this.state.text}
-          onChange={this.handleChange}
-        />
-        <LabelInput
-          label="City"
-          name="city"
+          label="University or School"
+          name="school"
           value={this.state.text}
           onChange={this.handleChange}
         />
@@ -109,8 +103,14 @@ class WorkExp extends React.Component {
           onChange={this.handleChange}
         />
         <LabelInput
-          label="Role:"
-          name="role"
+          label="Degree:"
+          name="degree"
+          value={this.state.text}
+          onChange={this.handleChange}
+        />
+        <LabelInput
+          label="GPA:"
+          name="gpa"
           value={this.state.text}
           onChange={this.handleChange}
         />
@@ -140,8 +140,8 @@ class WorkExp extends React.Component {
     }
     const savedData = this.mapSavedData();
     return (
-      <div className="work-exp">
-        <h2>Work Experience</h2>
+      <div className="education">
+        <h2>Education</h2>
         {savedData}
         {output}
       </div>
@@ -149,4 +149,4 @@ class WorkExp extends React.Component {
   }
 }
 
-export default WorkExp;
+export default Education;

@@ -1,7 +1,7 @@
 import React from "react";
 import LabelInput from "./LabelInput";
 
-class WorkExp extends React.Component {
+class Skills extends React.Component {
   constructor() {
     super();
     this.state = { formVisible: false, currentData: {}, savedData: [] };
@@ -68,12 +68,7 @@ class WorkExp extends React.Component {
       return (
         <div className={index}>
           {delButton}
-          <div key={arrayItem.company}>{arrayItem.company}</div>
-          <div key={arrayItem.from}>{arrayItem.from}</div>
-          <div key={arrayItem.to}>{arrayItem.to}</div>
-          <div key={arrayItem.city}>{arrayItem.city}</div>
-          <div key={arrayItem.role}>{arrayItem.role}</div>
-          <div key={arrayItem.description}>{arrayItem.description}</div>
+          <div key={arrayItem.skills}>{arrayItem.skills}</div>
         </div>
       );
     });
@@ -85,44 +80,11 @@ class WorkExp extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <LabelInput
-          label="Company Name"
-          name="company"
+          label="Skills"
+          name="skills"
           value={this.state.text}
           onChange={this.handleChange}
         />
-        <LabelInput
-          label="City"
-          name="city"
-          value={this.state.text}
-          onChange={this.handleChange}
-        />
-        <LabelInput
-          label="From:"
-          name="from"
-          value={this.state.text}
-          onChange={this.handleChange}
-        />
-        <LabelInput
-          label="To:"
-          name="to"
-          value={this.state.text}
-          onChange={this.handleChange}
-        />
-        <LabelInput
-          label="Role:"
-          name="role"
-          value={this.state.text}
-          onChange={this.handleChange}
-        />
-        <label>
-          Description
-          <textarea
-            type="text"
-            value={this.state.text}
-            name="description"
-            onChange={this.handleChange}
-          ></textarea>
-        </label>
         <input type="submit" value="Save" />
         <input type="button" value="Cancel" onClick={this.handleCancel} />
       </form>
@@ -140,8 +102,8 @@ class WorkExp extends React.Component {
     }
     const savedData = this.mapSavedData();
     return (
-      <div className="work-exp">
-        <h2>Work Experience</h2>
+      <div className="skills">
+        <h2>Skills</h2>
         {savedData}
         {output}
       </div>
@@ -149,4 +111,4 @@ class WorkExp extends React.Component {
   }
 }
 
-export default WorkExp;
+export default Skills;
