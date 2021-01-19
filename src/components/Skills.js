@@ -89,10 +89,12 @@ class Skills extends React.Component {
           ""
         );
       return (
-        <div className={index}>
+        <div className="skills-output">
           {delButton}
           {editButton}
-          <div key={arrayItem.skills}>{arrayItem.skills}</div>
+          <div class="one-skill-div" key={arrayItem.skills}>
+            {arrayItem.skills}
+          </div>
         </div>
       );
     });
@@ -136,7 +138,7 @@ class Skills extends React.Component {
     return (
       <div className="skills-area">
         <h2>Skills</h2>
-        {savedData}
+        <div class="skills-container">{savedData}</div>
         {output}
       </div>
     );

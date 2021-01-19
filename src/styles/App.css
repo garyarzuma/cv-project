@@ -25,8 +25,7 @@ textarea {
 }
 
 .footer {
-  bottom: 10px;
-  position: absolute;
+  float: bottom;
 }
 
 .header {
@@ -149,4 +148,52 @@ hr {
   width: 50px;
   height: 30px;
   border-radius: 30px;
+}
+
+.delete-button {
+  position: absolute;
+  right: 15px;
+  top: 0px;
+  width: 30px;
+  margin: 0px 0px 5px 5px;
+}
+
+.edit-button {
+  position: absolute;
+  right: 50px;
+  top: 0px;
+  margin: 0px 0px 5px 5px;
+}
+
+.form-output {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.description-output {
+  margin: 5px 0px 10px 25px;
+  width: 80%;
+  word-wrap: break-word;
+}
+
+.info-output {
+  word-wrap: break-word;
+  width: 80%;
+}
+
+.skills-output {
+  position: relative;
+  margin: 10px;
+  width: 30%;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.one-skill-div {
+  width: 50%;
+  word-wrap: break-word;
 }

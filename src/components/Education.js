@@ -89,16 +89,27 @@ class Education extends React.Component {
           ""
         );
       return (
-        <div className={index}>
+        <div className="form-output">
           {delButton}
           {editButton}
-          <div key={arrayItem.school}>{arrayItem.school}</div>
+          <div class="info-output" key={arrayItem.degree}>
+            <b>{arrayItem.degree}</b>, <i>{arrayItem.school}</i>,{" "}
+            {arrayItem.gpa}/4.0 gpa, {arrayItem.from} to {arrayItem.to}
+          </div>
+          <div class="description-output" key={arrayItem.description}>
+            {arrayItem.description}
+          </div>
+        </div>
+        /* <div className={index}>
+          {delButton}
+          {editButton}
+          <div key={}>{arrayItem.school}</div>
           <div key={arrayItem.from}>{arrayItem.from}</div>
           <div key={arrayItem.to}>{arrayItem.to}</div>
-          <div key={arrayItem.degree}>{arrayItem.degree}</div>
-          <div key={arrayItem.gpa}>{arrayItem.gpa}</div>
+          <div key={}>{arrayItem.degree}</div>
+          <div key={}>{arrayItem.gpa}</div>
           <div key={arrayItem.description}>{arrayItem.description}</div>
-        </div>
+        </div> */
       );
     });
 
@@ -125,7 +136,7 @@ class Education extends React.Component {
         <LabelInput
           label="To: "
           name="to"
-          type="date"
+          type="text"
           value={this.state.currentData.to}
           onChange={this.handleChange}
         />

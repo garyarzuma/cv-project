@@ -89,15 +89,16 @@ class WorkExp extends React.Component {
           ""
         );
       return (
-        <div className={index}>
+        <div className="form-output">
           {delButton}
           {editButton}
-          <div key={arrayItem.company}>{arrayItem.company}</div>
-          <div key={arrayItem.from}>{arrayItem.from}</div>
-          <div key={arrayItem.to}>{arrayItem.to}</div>
-          <div key={arrayItem.city}>{arrayItem.city}</div>
-          <div key={arrayItem.role}>{arrayItem.role}</div>
-          <div key={arrayItem.description}>{arrayItem.description}</div>
+          <div class="info-output" key={arrayItem.role}>
+            <b>{arrayItem.role}</b>, <i>{arrayItem.company}</i>,{" "}
+            {arrayItem.city}, {arrayItem.from} to {arrayItem.to}
+          </div>
+          <div class="description-output" key={arrayItem.description}>
+            {arrayItem.description}
+          </div>
         </div>
       );
     });
@@ -132,7 +133,7 @@ class WorkExp extends React.Component {
         <LabelInput
           label="To: "
           name="to"
-          type="date"
+          type="text"
           value={this.state.currentData.to}
           onChange={this.handleChange}
         />
