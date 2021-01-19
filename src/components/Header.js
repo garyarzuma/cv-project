@@ -1,5 +1,5 @@
 function Header() {
-  return <div className="header">C.V. Builder</div>;
+  return <h1 className="header">C.V. Builder</h1>;
 }
 
 export default Header;
