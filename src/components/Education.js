@@ -109,39 +109,45 @@ class Education extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <LabelInput
-          label="University or School"
+          label="University or School: "
           name="school"
+          type="text"
           value={this.state.currentData.school}
           onChange={this.handleChange}
         />
         <LabelInput
-          label="From:"
+          label="From: "
           name="from"
+          type="date"
           value={this.state.currentData.from}
           onChange={this.handleChange}
         />
         <LabelInput
-          label="To:"
+          label="To: "
           name="to"
+          type="date"
           value={this.state.currentData.to}
           onChange={this.handleChange}
         />
         <LabelInput
-          label="Degree:"
+          label="Degree: "
           name="degree"
+          type="text"
           value={this.state.currentData.degree}
           onChange={this.handleChange}
         />
         <LabelInput
-          label="GPA:"
+          label="GPA: "
           name="gpa"
+          type="text"
           value={this.state.currentData.gpa}
           onChange={this.handleChange}
         />
         <label>
-          Description
+          Description:
           <textarea
             type="text"
+            class="description"
             value={this.state.currentData.description}
             name="description"
             onChange={this.handleChange}

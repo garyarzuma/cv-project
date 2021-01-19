@@ -109,38 +109,44 @@ class WorkExp extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <LabelInput
-          label="Company Name"
+          label="Company Name: "
           name="company"
+          type="text"
           value={this.state.currentData.company}
           onChange={this.handleChange}
         />
         <LabelInput
-          label="City"
+          label="City: "
           name="city"
+          type="text"
           value={this.state.currentData.city}
           onChange={this.handleChange}
         />
         <LabelInput
-          label="From:"
+          label="From: "
           name="from"
+          type="date"
           value={this.state.currentData.from}
           onChange={this.handleChange}
         />
         <LabelInput
-          label="To:"
+          label="To: "
           name="to"
+          type="date"
           value={this.state.currentData.to}
           onChange={this.handleChange}
         />
         <LabelInput
-          label="Role:"
+          label="Role: "
           name="role"
+          type="text"
           value={this.state.currentData.role}
           onChange={this.handleChange}
         />
         <label>
-          Description
+          Description:
           <textarea
+            class="description"
             type="text"
             value={this.state.currentData.description}
             name="description"

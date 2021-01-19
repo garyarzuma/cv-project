@@ -30,7 +30,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <button onClick={this.changeMode}>{this.state.workModeText}</button>
+        <button class="mode-button" onClick={this.changeMode}>
+          {this.state.workModeText}
+        </button>
         <div className="Resume">
           <PersonalInfo />
           <hr />

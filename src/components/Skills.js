@@ -104,8 +104,9 @@ class Skills extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <LabelInput
-          label="Skills"
+          label="Skill: "
           name="skills"
+          type="text"
           value={this.state.currentData.skills}
           onChange={this.handleChange}
         />
@@ -133,7 +134,7 @@ class Skills extends React.Component {
     }
     const savedData = this.mapSavedData();
     return (
-      <div className="skills">
+      <div className="skills-area">
         <h2>Skills</h2>
         {savedData}
         {output}

@@ -6,7 +6,8 @@ class LabelInput extends React.Component {
       <label>
         {this.props.label}
         <input
-          type="text"
+          class={this.props.name}
+          type={this.props.type}
           value={this.props.value}
           name={this.props.name}
           onChange={this.props.onChange}
