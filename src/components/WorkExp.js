@@ -16,6 +16,7 @@ class WorkExp extends React.Component {
 
   handleChange(event) {
     this.setState({
+      //Need to use spread operator so that we do not overwrite the existing elements in current data
       currentData: {
         ...this.state.currentData,
         [event.target.name]: event.target.value,
@@ -26,8 +27,9 @@ class WorkExp extends React.Component {
   handleSubmit(event) {
     this.setState({
       formVisible: false,
+      //spread operator maintains elements in savedData and pushes the currentData object to the end of the array
       savedData: [...this.state.savedData, this.state.currentData],
-      currentData: {},
+      currentData: {}, //clears current data so the form is ready to input again cleanly
     });
     event.preventDefault();
   }
@@ -61,6 +63,7 @@ class WorkExp extends React.Component {
   }
 
   mapSavedData() {
+    //uses map function to go through every object in the saved data and create the buttons and div to display it
     const output = this.state.savedData.map((arrayItem, index) => {
       const delButton =
         this.props.workMode === true ? (
@@ -167,7 +170,9 @@ class WorkExp extends React.Component {
 
   render() {
     let output = "";
+    //only displays the add butto or form if the workmode prop is true.
     if (this.props.workMode === true) {
+      //either makes the output the add button or shows the form
       output = this.state.formVisible ? (
         this.renderForm()
       ) : (

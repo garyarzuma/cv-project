@@ -1,6 +1,7 @@
 import React from "react";
 import LabelInput from "./LabelInput";
 
+//this class is based on the WorkExp class. Refer to that for comments. Minor things are changed.
 class Education extends React.Component {
   constructor() {
     super();

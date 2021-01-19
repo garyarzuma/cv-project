@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# CV-Builder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Web App that allows users to build their own CV/Resume with a nice template that allows them to easily add in their information, work experience, education, and skills.
 
-## Available Scripts
+Features:
 
-In the project directory, you can run:
+    -An edit mode for entering in all your infomration and a display mode which shows the CV/Resume as it would look printed out.
+    -Ability to edit, delete, or add as many items as you want under each section!
+    -Easy to fill in and formats data for you with styling to make your resume look great.
 
-### `npm start`
+Demonstrated Skills:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    -Uses the create-react-app to start the backbone of this project.
+    -Uses React.js to handle all of the frontend using states, props and components with class based components.
+    -Effectively uses the bind() function for React state functions so they can be used in callbacks for components.
+    -Uses map() method to display all the different objects in the savedData array.
+    -Uses React.js methods like render() to control the output to the DOM.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Future Ways to Improve:
 
-### `npm test`
+    -The components for Work Experience, Education, and Skills repeat much of the same code.
+     It would be nice to create 1 component and pass in an array of values for these instead of creating 3 separate components.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Overall project time: ~25 hours Date Completed: 1/18/2020
 
-### `npm run build`
+-Gary Arzumanyan
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Sample Screenshot](cv-project-sample-image.png)
