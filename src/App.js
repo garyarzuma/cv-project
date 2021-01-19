@@ -12,6 +12,7 @@ class App extends React.Component {
     super();
     this.state = {
       workMode: true,
+      workModeText: "Display Mode",
     };
 
     this.changeMode = this.changeMode.bind(this);
@@ -20,6 +21,8 @@ class App extends React.Component {
   changeMode() {
     this.setState({
       workMode: !this.state.workMode,
+      workModeText:
+        this.state.workMode === false ? "Display Mode" : "Edit Mode",
     });
   }
 
@@ -27,7 +30,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <button onClick={this.changeMode}>Workmode</button>
+        <button onClick={this.changeMode}>{this.state.workModeText}</button>
         <div className="Resume">
           <PersonalInfo />
           <WorkExp workMode={this.state.workMode} />
