@@ -11,6 +11,7 @@ class Education extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleOpenForm = this.handleOpenForm.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
   handleChange(event) {
@@ -50,12 +51,21 @@ class Education extends React.Component {
     this.setState({ savedData: array });
   }
 
+  handleEdit(event) {
+    const index = event.target.id;
+    this.setState({
+      currentData: this.state.savedData[index],
+    });
+    this.handleDelete(event);
+    this.handleOpenForm(event);
+  }
+
   mapSavedData() {
     const output = this.state.savedData.map((arrayItem, index) => {
       const delButton =
         this.props.workMode === true ? (
           <button
-            key={index}
+            key={index + 1}
             className="delete-button"
             id={index}
             onClick={this.handleDelete}
@@ -65,9 +75,23 @@ class Education extends React.Component {
         ) : (
           ""
         );
+      const editButton =
+        this.props.workMode === true ? (
+          <button
+            key={index}
+            className="edit-button"
+            id={index}
+            onClick={this.handleEdit}
+          >
+            Edit
+          </button>
+        ) : (
+          ""
+        );
       return (
         <div className={index}>
           {delButton}
+          {editButton}
           <div key={arrayItem.school}>{arrayItem.school}</div>
           <div key={arrayItem.from}>{arrayItem.from}</div>
           <div key={arrayItem.to}>{arrayItem.to}</div>
@@ -87,38 +111,38 @@ class Education extends React.Component {
         <LabelInput
           label="University or School"
           name="school"
-          value={this.state.text}
+          value={this.state.currentData.school}
           onChange={this.handleChange}
         />
         <LabelInput
           label="From:"
           name="from"
-          value={this.state.text}
+          value={this.state.currentData.from}
           onChange={this.handleChange}
         />
         <LabelInput
           label="To:"
           name="to"
-          value={this.state.text}
+          value={this.state.currentData.to}
           onChange={this.handleChange}
         />
         <LabelInput
           label="Degree:"
           name="degree"
-          value={this.state.text}
+          value={this.state.currentData.degree}
           onChange={this.handleChange}
         />
         <LabelInput
           label="GPA:"
           name="gpa"
-          value={this.state.text}
+          value={this.state.currentData.gpa}
           onChange={this.handleChange}
         />
         <label>
           Description
           <textarea
             type="text"
-            value={this.state.text}
+            value={this.state.currentData.description}
             name="description"
             onChange={this.handleChange}
           ></textarea>

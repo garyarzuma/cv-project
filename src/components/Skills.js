@@ -11,6 +11,7 @@ class Skills extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleOpenForm = this.handleOpenForm.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
   handleChange(event) {
@@ -50,12 +51,21 @@ class Skills extends React.Component {
     this.setState({ savedData: array });
   }
 
+  handleEdit(event) {
+    const index = event.target.id;
+    this.setState({
+      currentData: this.state.savedData[index],
+    });
+    this.handleDelete(event);
+    this.handleOpenForm(event);
+  }
+
   mapSavedData() {
     const output = this.state.savedData.map((arrayItem, index) => {
       const delButton =
         this.props.workMode === true ? (
           <button
-            key={index}
+            key={index + 1}
             className="delete-button"
             id={index}
             onClick={this.handleDelete}
@@ -65,9 +75,23 @@ class Skills extends React.Component {
         ) : (
           ""
         );
+      const editButton =
+        this.props.workMode === true ? (
+          <button
+            key={index}
+            className="edit-button"
+            id={index}
+            onClick={this.handleEdit}
+          >
+            Edit
+          </button>
+        ) : (
+          ""
+        );
       return (
         <div className={index}>
           {delButton}
+          {editButton}
           <div key={arrayItem.skills}>{arrayItem.skills}</div>
         </div>
       );
@@ -82,7 +106,7 @@ class Skills extends React.Component {
         <LabelInput
           label="Skills"
           name="skills"
-          value={this.state.text}
+          value={this.state.currentData.skills}
           onChange={this.handleChange}
         />
         <input type="submit" value="Save" />
