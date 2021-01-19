@@ -109,8 +109,13 @@ class Skills extends React.Component {
           value={this.state.currentData.skills}
           onChange={this.handleChange}
         />
-        <input type="submit" value="Save" />
-        <input type="button" value="Cancel" onClick={this.handleCancel} />
+        <input class="save-button" type="submit" value="Save" />
+        <input
+          class="cancel-button"
+          type="button"
+          value="Cancel"
+          onClick={this.handleCancel}
+        />
       </form>
     );
   }
@@ -121,7 +126,9 @@ class Skills extends React.Component {
       output = this.state.formVisible ? (
         this.renderForm()
       ) : (
-        <button onClick={this.handleOpenForm}>+Add</button>
+        <button class="button" onClick={this.handleOpenForm}>
+          +Add
+        </button>
       );
     }
     const savedData = this.mapSavedData();

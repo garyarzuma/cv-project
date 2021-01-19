@@ -37,6 +37,8 @@
 
 .Resume .personal-info .name-area {
   font-size: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .Resume .personal-info .name-area input {
@@ -52,4 +54,34 @@ p {
 .skills {
   display: flex;
   flex-direction: column;
+}
+
+hr {
+  border: 1px solid rgba(15, 16, 21, 0.4);
+  width: 100%;
+}
+
+.button,
+.save-button,
+.cancel-button {
+  width: 70px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  background-color: rgba(179, 179, 179, 0.308);
+  border-radius: 10px;
+  margin: 3px;
+  font-size: 15px;
+}
+
+.button:hover,
+.save-button:hover,
+.cancel-button:hover {
+  border: 1px solid gray;
+}
+
+.save-button {
+  background-color: rgba(84, 158, 84, 0.637);
+}
+
+.cancel-button {
+  background-color: rgba(199, 84, 84, 0.637);
 }

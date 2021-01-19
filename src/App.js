@@ -33,8 +33,11 @@ class App extends React.Component {
         <button onClick={this.changeMode}>{this.state.workModeText}</button>
         <div className="Resume">
           <PersonalInfo />
+          <hr />
           <WorkExp workMode={this.state.workMode} />
+          <hr />
           <Education workMode={this.state.workMode} />
+          <hr />
           <Skills workMode={this.state.workMode} />
         </div>
         <Footer />
