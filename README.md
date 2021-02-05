@@ -21,7 +21,7 @@ Future Ways to Improve:
     -The components for Work Experience, Education, and Skills repeat much of the same code.
      It would be nice to create 1 component and pass in an array of values for these instead of creating 3 separate components.
 
-Overall project time: ~25 hours Date Completed: 1/18/2020
+Overall project time: ~25 hours Date Completed: 1/18/2021
 
 -Gary Arzumanyan
 
